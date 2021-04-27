@@ -1,0 +1,20 @@
+.thumbnail img {
+    width: 100%;
+
+}
+
+.thumbnail {
+    padding: 0;
+    -webkit-box-shadow: 10px 10px 14px -5px rgba(159,162,194,1);
+    -moz-box-shadow: 10px 10px 14px -5px rgba(159,162,194,1);
+    box-shadow: 10px 10px 14px -5px rgba(159,162,194,1);
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    text-transform: capitalize;
+}
+
+.delete-form {
+    display: inline;
+}
