@@ -10,13 +10,14 @@ var express = require("express");
     (Comment = require('./models/comment')),
     (User = require("./models/user.ejs")),
     (seedDB = require('./seeds'));
+    
 
 var commentRoutes   = require("./routes/comments");
     campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes      = require("./routes/index")
-
-// mongodb://localhost:27017/Yelp_camp_v12
-var url = process.env.DATABASEURL   || "mongodb+srv://Sam123:Sam123@cluster0.s7kr8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+ 
+// mongodb://localhost:27017/Truba_camp_v12
+var url = process.env.DATABASEURL  || "mongodb+srv://Sam123:Sam123@cluster0.s7kr8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -58,10 +59,10 @@ app.use(indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
-// app.listen(3000 , function () {
-//     console.log("Truba Camp server started");
-// });
-
-app.listen(process.env.PORT , process.env.IP,  function () {
+app.listen(3000 , function () {
     console.log("Truba Camp server started");
 });
+
+// app.listen(process.env.PORT , process.env.IP,  function () {
+//     console.log("Truba Camp server started");
+// });
