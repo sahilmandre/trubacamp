@@ -17,7 +17,7 @@ var commentRoutes   = require("./routes/comments");
     indexRoutes      = require("./routes/index")
  
 // mongodb://localhost:27017/Truba_camp_v12
-var url = process.env.DATABASEURL  || "mongodb+srv://Sam123:Sam123@cluster0.s7kr8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+var url = process.env.DATABASEURL  || "http://localhost:3000/"
 mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
